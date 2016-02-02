@@ -1,0 +1,10 @@
+= simple_form_for [@user, @item] do |f|
+  = f.input :name
+  = f.input :item_type
+  = f.input :size
+  = f.input :user_id, collection: User.all, include_blank: false
+  = f.association :occasions
+  = f.association :seasons
+  = f.submit
+
+= link_to 'Cancel', user_items_path(@user)

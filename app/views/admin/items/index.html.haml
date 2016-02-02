@@ -1,0 +1,21 @@
+%h1 Clothes
+
+%table.table.table-striped
+  %tr
+    %th Name
+    %th Type
+    %th Size
+    %th Owner
+    %th Occasion
+    %th Season
+    %th Actions
+  - @items.each do |item|
+    %tr
+      %td= item.name
+      %td= item.item_type
+      %td= item.size
+      %td= item.user
+      %td= item.occasions.map(&:name).join(', ')
+      %td= item.seasons.map(&:name).join(', ')
+      %td
+        = link_to 'Show', admin_item_path(item.id)

@@ -1,0 +1,20 @@
+%h1
+  = @item.name
+
+%p
+  %b Type:
+  = @item.item_type
+
+%p
+  %b Size:
+  = @item.size
+
+%p
+  %b Occasions:
+  = @item.occasions.map(&:name).join(', ')
+
+%p
+  %b Seasons:
+  = @item.seasons.map(&:name).join(', ')
+
+= link_to 'Back', user_items_path(@user)

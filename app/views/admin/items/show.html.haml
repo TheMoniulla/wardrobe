@@ -1,0 +1,20 @@
+%h1
+  = @item.name
+
+%p
+  %b Type:
+  = @item.item_type
+
+%p
+  %b Size:
+  = @item.size
+
+%p
+  %b Occasions:
+  = @item.occasions_for_display
+
+%p
+  %b Seasons:
+  = @item.seasons_for_display
+
+= link_to 'Back', admin_items_path

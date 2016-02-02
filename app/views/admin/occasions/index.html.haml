@@ -1,0 +1,14 @@
+%h1 Occasions
+= link_to 'New occasion', new_admin_occasion_path, class: 'btn btn-success'
+
+%table.table.table-striped
+  %tr
+    %th Name
+    %th Actions
+  - @occasions.each do |occasion|
+    %tr
+      %td= occasion.name
+      %td
+        = link_to 'Show', admin_occasion_path(occasion.id)
+        = link_to 'Edit', edit_admin_occasion_path(occasion.id)
+        = link_to 'Delete', admin_occasion_path(occasion.id), method: :delete, data: {confirm: 'Are you sure?'}

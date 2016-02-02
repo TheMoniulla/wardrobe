@@ -1,0 +1,11 @@
+%h1 Seasons
+
+%table.table.table-striped
+  %tr
+    %th Name
+    %th Actions
+  - @seasons.each do |season|
+    %tr
+      %td= season.name
+      %td
+        = link_to 'Show', admin_season_path(season.id)

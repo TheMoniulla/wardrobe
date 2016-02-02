@@ -1,0 +1,7 @@
+= simple_form_for [:admin, @user] do |f|
+  = f.input :name
+  = f.input :age
+  = f.input :sex
+  = f.submit
+
+= link_to 'Cancel', admin_users_path
